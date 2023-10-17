@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Summarizer</title>
+</head>
+<body>
+    <h1>Text Summarizer</h1>
+
+    <form method="POST" action="/summarize">
+        <textarea name="text" rows="10" cols="40" placeholder="Enter text to summarize"></textarea>
+        <br>
+        <input type="submit" value="Summarize">
+    </form>
+
+    {% if text %}
+    <h2>Original Text:</h2>
+    <p>{{ text }}</p>
+    <h2>Abstractive Summary:</h2>
+    <p>{{ abstractive_summary }}</p>
+    {% endif %}
+</body>
+</html>
